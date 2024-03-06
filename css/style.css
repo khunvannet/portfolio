@@ -135,17 +135,10 @@ section {
   height: 80%;
 }
 
-.title {
-  font-size: 3rem;
-  color: blueviolet;
-}
-.title-name {
-  font-size: 3rem;
-  color: black;
-}
+.title,
+.title-name,
 .name {
   font-size: 3rem;
-  color: blueviolet;
 }
 
 .btn,
@@ -242,6 +235,7 @@ a,
   height: 400px;
   width: 400px;
   margin: auto 0;
+  z-index: 1;
 }
 
 #socials-container {
@@ -277,7 +271,7 @@ a,
   bottom: 2.5rem;
 }
 
-/* EXPERIENCE SECTIION */
+/* EXPERIENCE SECTION */
 
 .article-container {
   text-align: initial;
@@ -350,6 +344,7 @@ footer {
 .hamburger-menu {
   position: relative;
   display: inline-block;
+  z-index: 100;
 }
 
 .hamburger-icon {
@@ -405,6 +400,10 @@ footer {
   opacity: 0;
 }
 
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
 .hamburger-icon.open span:last-child {
   transform: rotate(-45deg) translate(10px, -5px);
 }
@@ -424,17 +423,6 @@ footer {
 .animated-section {
   opacity: 0;
   animation: slideInFromLeft 1s ease-in-out forwards; /* forwards keeps the element at the end of the animation */
-}
-
-@keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 @keyframes slideInFromLeft {
